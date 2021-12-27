@@ -28,7 +28,7 @@ public class MenuScreen {
 		menuPanel.setPreferredSize(new Dimension(500, 500));
 		menuPanel.setBackground(new Color(50, 50, 0));
 
-		JButton ticTacToeButton = new JButton("Play TicTacToe");
+		JButton ticTacToeButton = new JButton("Click to Play TicTacToe");
 
 		menuPanel.add(ticTacToeButton);
 

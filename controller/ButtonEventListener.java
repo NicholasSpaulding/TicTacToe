@@ -63,7 +63,26 @@ public class ButtonEventListener implements ActionListener {
 		}
 	}
 
+	boolean checkCat() {
+		int count = 0;
+		for (int i = 0; i < buttons.length; i++) {
+			if (buttons[i].getText() == "" )
+				count++;
+		}
+		if (count != 0)
+			return false;
+		else
+			return true;
+	}
+
 	void makeMove() {
+		if (checkCat()) {
+			textFeild.setText("Cat's Game");
+				for (int i = 0; i < buttons.length; i++) {
+					buttons[i].setEnabled(false);
+				}
+			return;
+		}
 		Random rand = new Random();
 		int randnumb = rand.nextInt(8);
 		if (buttons[randnumb].getText() != "") {
